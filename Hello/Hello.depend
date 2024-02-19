@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1692703494 source:d:\users\acer\desktop\c++ file\hello\main.cpp
+	<iostream>
+	<vector>
+	<set>
+

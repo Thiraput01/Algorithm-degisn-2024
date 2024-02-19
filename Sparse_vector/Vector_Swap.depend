@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1692546960 source:d:\users\acer\desktop\c++ file\vector_swap\main.cpp
+	<iostream>
+	<vector>
+
+1693833087 source:d:\users\acer\desktop\c++ file\sparse_vector\main.cpp
+	<iostream>
+	<vector>
+	<map>
+

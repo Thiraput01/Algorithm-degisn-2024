@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1692722514 source:d:\users\acer\desktop\c++ file\vectorswap\main.cpp
+	<iostream>
+	<vector>
+
