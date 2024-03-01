@@ -1,13 +1,15 @@
+mod = 100000007
 n = int(input())
-n -= 2
-dp = [0] * (n+1)
-last_row1 = [0] * (n+1)
-last_row2 = [0] * (n+1)
-dp[0] = 7
-last_row1[0] = 5
-last_row2[0] = 5
-for i in range(1, n+1):
-    dp[i] = dp[i-1] + last_row1[i-1] + last_row2[i-1]
-    last_row1[i] = last_row1[i-1] + (i + 2)
-    last_row2[i] = last_row2[i-1] + (i + 2)
-print(dp)
+
+# Create dp list with separate lists for each row
+dp = [1]*(n+1)
+# Base case
+# n = 1 --> [00] [01] [10]
+dp[1] = 3
+# From 2 to n
+for i in range(2, n+1):
+    dp[i] = (((2 * dp[i-1]) % mod) + dp[i-2]) % mod
+    
+print(dp[-1] % mod)
+
+
