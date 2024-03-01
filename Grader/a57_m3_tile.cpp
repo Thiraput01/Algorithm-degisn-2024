@@ -4,7 +4,7 @@ using namespace std;
 
 int n, m;
 vector<int> v(11, 0);
-vector<vector<int>> dp(10001, vector<int>(10001, INF));
+vector<vector<int>> dp(11, vector<int>(10001, INF));
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(0);
