@@ -29,10 +29,8 @@ int main(){
         auto u = q.front(); q.pop();
         int i = u.first;
         int j = u.second;
-        // cout << "i: " << i << ", j: " << j << " ";
 
         if(i==-1 && j==-1){
-            // cout<< "change to level: " << level+1 << " ...";
             level++;
             q.push({-1, -1});
             continue;
@@ -40,11 +38,7 @@ int main(){
 
         if(level == t) break;
         if(v[i][j] == 1) ans++;
-        // cout << "current pos: (" << i << ", " << j << ") . ";
-        // cout << "current ans: " << ans << "\n";
 
-        //check all for up, down, left, right
-        //up
         if(i-1>=0 && !v[i-1][j]){
             v[i-1][j] = 1;
             q.push(make_pair(i-1, j));
@@ -65,19 +59,5 @@ int main(){
             q.push(make_pair(i, j+1));
         }
     }
-    // cout << "\n================================\n";
     cout << ans;
-
-
-    // cout << "============================\n";
-
-    // for(auto i : v){
-    //     for(auto j : i){
-    //         cout << j << " ";
-    //     }
-    //     cout << "\n";
-    // }
-
-    // for(auto &i : start) cout << i.first << " , " << i.second << " ";
-
 }
